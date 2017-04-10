@@ -1,0 +1,39 @@
+{
+  "name": "webbeginner1",
+  "version": "1.0.0",
+  "description": "loftSchool webbeginner first project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "autoprefixer": "^6.7.7",
+    "del": "^2.2.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-file": "^0.3.0",
+    "gulp-less": "^3.1.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^1.5.4",
+    "merge-stream": "^1.0.0",
+    "require-dir": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/energy1/loftscool1.git"
+  },
+  "keywords": [
+    "markup"
+  ],
+  "author": "andrey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/energy1/loftscool1/issues"
+  },
+  "homepage": "https://github.com/energy1/loftscool1#readme"
+}
