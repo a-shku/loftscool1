@@ -6,6 +6,9 @@
     <meta keywords="loftscool">
     <title>Portfolio</title>
     <link rel="stylesheet" href="web/core/assets/main-app.css" type="text/css" />
+    
+    <link rel="stylesheet" href="web/vendor/css/assets.min.css" type="text/css">
+    
 </head>
 <body>
     
@@ -13,8 +16,10 @@
         <header class="header">
             <div class="header_container container ">
                 <div class="header_container_left left-half">
+                    
+
                     <img src="web/core/assets/img/content/photo.jpg" class="header_container_left__avatar"></img>
-                    <span class="header_container_left__name">Константин Константинов</span>
+                    <span class="header_container_left__name"> Константин Константинов</span>
                     
                 </div>
                 <div class="header_container_right right-half">
@@ -27,22 +32,31 @@
         </header>
         
         <section>
-            <nav class="main-sidebar">
+            <aside class="left-sidebar">
+                <nav class="main-nav">
                 <ul class="menu">
                     <li>
                         <a href="#" class="menu__item">
-                        <i class="menu__icon"></i>Обо мне</a>
+                            <i class="fa fa-user-secret menu__icon" aria-hidden="true"></i>
+                            Обо мне
+                        </a>
                     </li>
                     <li>
                         <a href="#" class="menu__item">
-                        <i class="menu__icon">Карьерный путь</a>
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                            Карьерный путь
+                        </a>
                     </li>
                     <li>
                         <a href="#" class="menu__item">
-                        <i class="menu__icon">Портфолио</a>
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            Портфолио
+                        </a>
                     </li>
                 </ul>
             </nav>
+            </aside>
+            
             <content class="main-content">
                 <h1 class="main-content__title">Обо мне</h1>
                 <div class="main-content_main-text">
@@ -80,7 +94,7 @@
     </div>
     
     <footer>
-        <div class="left-half">Дизайн сайта был разработан В школе LoftSchool</div>
+        <div class="left-half"> &copy; Дизайн сайта был разработан В школе LoftSchool</div>
         <div class="right-half">
             <div class="soc">
                 <a class="soc__link soc__link_fb" href="#"></a>
