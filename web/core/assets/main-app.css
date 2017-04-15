@@ -219,6 +219,11 @@ img {
   padding: 8px 0;
   background: #fef;
 }
+.header_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .content {
   background: #f6f6f6;
 }

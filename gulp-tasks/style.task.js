@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     
     
 var resources = {}, paths = {}, assetsFiles;
+var filesForWatch = ['web/core/assets/less/*.less', 'index.html'];
 
 paths.bowerComponents = 'bower_components/';
 paths.css = 'web/core/assets/css';
@@ -29,7 +30,7 @@ gulp.task('less', function(){
     .pipe(plugins.less())
     .pipe(plugins.rename('main-app.css'))
     .pipe(gulp.dest('web/core/assets'))
-    .pipe(plugins.livereload());
+    
 });
 
 // gulp.task('css', function(){
@@ -56,7 +57,7 @@ gulp.task('browser-sync', function() {
     
         // You can use wildcards in here.
         
-        files: 'index.html, styles.css',
+        files: filesForWatch,
         
         // We can pick port 8081 or 8082, if you are more of a 2's kind of guy, go for the 8082. Highly recommended.
         
@@ -69,8 +70,9 @@ gulp.task('browser-sync', function() {
 //watch
 gulp.task('watch', function() {
     
-    gulp.watch('web/core/assets/less/*.less', ['less']);
-    plugins.livereload.listen();
+    //gulp.watch('web/core/assets/less/*.less', ['less', 'browser-sync']);
+    gulp.watch(filesForWatch, ['less', 'browser-sync']);
+    
 });
 
 gulp.task('default', ['less']);
