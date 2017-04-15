@@ -7,7 +7,10 @@ var gulp = require('gulp'),
     });
 
 gulp.task('less', function(){
-    gulp.src('web/core/assets/less/*.less')
+   return gulp.src('web/core/assets/less/_common-style.less')
     .pipe(plugins.less())
-    .pipe.gulp.dest('web/core/assets/css');
+    .pipe(plugins.rename('main-app.css'))
+    .pipe(gulp.dest('web/core/assets'));
 });
+
+gulp.task('default', ['less']);
