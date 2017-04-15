@@ -2,5 +2,28 @@
   display: inline-block;
   width: 31px;
   height: 30px;
-  background: url(img/icons/socials-buttons-2.png);
+}
+.soc__link_fb {
+  background: url(img/icons/socials-buttons-2.png) 0 0;
+  transition: all .5s;
+}
+.soc__link_vk {
+  background: url(img/icons/socials-buttons-2.png) -38px 0;
+  transition: all .5s;
+}
+.soc__link_tw {
+  background: url(img/icons/socials-buttons-2.png) -76px 0;
+  transition: all .5s;
+}
+.soc__link_fb:hover {
+  background: url(img/icons/socials-buttons-2.png) 0 30px;
+  transition: all .5s;
+}
+.soc__link_vk:hover {
+  background: url(img/icons/socials-buttons-2.png) -38px 30px;
+  transition: all .5s;
+}
+.soc__link_tw:hover {
+  background: url(img/icons/socials-buttons-2.png) -76px 30px;
+  transition: all .5s;
 }
