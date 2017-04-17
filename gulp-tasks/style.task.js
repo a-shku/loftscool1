@@ -5,7 +5,11 @@ var gulp = require('gulp'),
         pattern: ['gulp-*', 'gulp.*'],
         replaceString: /\bgulp[\-.]/
     }), 
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync')
+    //,font2css = require('gulp-font2css').default
+    
+    ;
+    
     
     
 var resources = {}, paths = {}, assetsFiles;
@@ -24,6 +28,16 @@ resources = {
         paths.bowerComponents + 'font-awesome/css/font-awesome.min.css'
     ]
 };
+
+
+
+gulp.task('fonts', function() {
+  return gulp.src('web/vendor/fonts/**/*.{otf,ttf,woff,woff2}')
+    .pipe(plugins.font2css.default())
+    .pipe(plugins.concat('fonts.css'))
+    .pipe(gulp.dest('web/dist/'));
+});
+
 
 gulp.task('less', function(){
    return gulp.src('web/core/assets/less/main.less')
@@ -52,6 +66,8 @@ gulp.task('css:assets', function () {
 });
 
 gulp.task('browser-sync', function() {
+    //https://c9.io/blog/browsersync-gulp-js-cloud9/
+    //for starting reload 1. 'service apache2 start'; 2. 'gulp watch'
 
     browserSync({
     
@@ -69,7 +85,7 @@ gulp.task('browser-sync', function() {
 
 //watch
 gulp.task('watch', function() {
-    
+   
     //gulp.watch('web/core/assets/less/*.less', ['less', 'browser-sync']);
     gulp.watch(filesForWatch, ['less', 'browser-sync']);
     

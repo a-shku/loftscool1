@@ -20,9 +20,27 @@
 //     background: green;
 // }
 
+html {
+    font-family: 'fira_sansregular';
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+.clear-fix:before, .clear-fix:after {
+    content: "";
+    display: table;
+}
+
+.clear-fix:after {
+    clear: both;
+}
+
 .container {
     margin: 0 auto;
-    min-width: 940px;
+    max-width: 940px;
     width: 940px;
 }
 
@@ -49,27 +67,19 @@
 }
 
 .header {
-    
-    
+    position: relative;
+    min-width: 960px;
     padding: 8px 0;
     background: #fef;
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
 }
 
 .header_container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
-}
-
-.content {
-    background: rgb(246, 246, 246);
-}
-
-
-
-img {
-    vertical-align: middle;
 }
 
 .header_container_left__avatar {
@@ -78,14 +88,110 @@ img {
     height: 60px; 
     object-fit: cover;
     border: 1px solid #bebebe;
-    
-
 }
+
+.header_container_left__name {
+    font-size: 18px;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+.content {
+    background: rgb(246, 246, 246);
+    padding-top: 25px;
+    padding-bottom: 50px;
+    min-width: 960px;
+    
+}
+
+.main-content {
+    //float: right;
+    max-width: 600px;
+    
+}
+
+.left-sidebar {
+    width: 222px;
+    float: left;
+    margin-right: 55px;
+}
+
+.menu__item {
+    line-height: 45px;
+   
+}
+
+.menu__item__link {
+    display: inline-block;
+    width: 100%;
+    color: #414141;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: FiraSans-Regular;
+}
+
+.menu__item__link:hover {
+    color: #33c1e3;
+}
+
+.menu__item__link:active {
+    color: #33c1e3;
+    
+   -webkit-box-shadow: inset -5px 0px 0px 0px #33c1e3;
+    -moz-box-shadow: inset -5px 0px 0px 0px #33c1e3;
+    box-shadow: inset -5px 0px 0px 0px #33c1e3;
+}
+
+
+.main-content__big-photo {
+    float: left;
+}
+
+.main-content__big-photo_img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-right: 55px;
+    object-fit: cover;
+}
+
+.main-content__article {
+    float: right;
+    width: 388px;
+    
+    
+}
+
+.main-content__article_text {
+    height: 300px;
+    overflow: auto;
+}
+
+.main-content__article_title {
+    font-family: 'firaSans-medium';
+}
+
+.download-btn {
+    font-family: FiraSans-Bold;
+}
+
+.footer {
+    min-width: 960px;
+}
+
+
+
+
+
+
 
 .soc__link {
     display: inline-block;
     width: 31px; //7px separate
     height: 30px;
+    text-indent: 100%;
+    overflow: hidden;
     
 }
 
