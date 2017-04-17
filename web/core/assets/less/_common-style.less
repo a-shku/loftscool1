@@ -21,11 +21,12 @@
 // }
 
 html {
-    font-family: 'fira_sansregular';
+    font-family: 'FiraSans-Regular', Helvetica, sans-serif;
+    font-size: 10px;
 }
 
-img {
-    vertical-align: middle;
+body {
+    font-size: 1.6rem;
 }
 
 
@@ -96,12 +97,19 @@ img {
     vertical-align: middle;
 }
 
+
+.dotted-spaced {
+    background-image: linear-gradient(to right,  rgba(255, 255, 255, 0) 10%, #333 0%);
+    background-position: bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+}
+
 .content {
-    background: rgb(246, 246, 246);
+    background: rgb(246, 246, 246) /*url('./img/bg/geometry2.png') repeat*/;
     padding-top: 25px;
     padding-bottom: 50px;
     min-width: 960px;
-    
 }
 
 .main-content {
@@ -111,9 +119,13 @@ img {
 }
 
 .left-sidebar {
-    width: 222px;
+    width: 220px;
     float: left;
     margin-right: 55px;
+}
+
+.menu {
+    text-align: right;
 }
 
 .menu__item {
@@ -128,6 +140,14 @@ img {
     text-decoration: none;
     font-size: 18px;
     font-family: FiraSans-Regular;
+    padding-right: 30px;
+    
+    line-height: 28px;
+    color: rgb(51, 193, 227);
+}
+
+.menu__icon {
+    letter-spacing: 4px;
 }
 
 .menu__item__link:hover {
