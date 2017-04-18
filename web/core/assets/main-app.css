@@ -279,11 +279,14 @@ body {
   margin-left: 15px;
   vertical-align: middle;
 }
-.dotted-spaced {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, #333 0%);
-  background-position: bottom;
-  background-size: 10px 1px;
-  background-repeat: repeat-x;
+.header_container_right__link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  color: #33c1e3;
+  padding-bottom: 5px;
+  font-weight: bold;
+  background: url(img/bg/dotted-border.png) 0 bottom repeat-x;
 }
 .content {
   background: #f6f6f6 /*url('./img/bg/geometry2.png') repeat*/;
@@ -349,12 +352,47 @@ body {
 }
 .main-content__article_title {
   font-family: 'firaSans-medium';
+  font-size: 35px;
+  color: #414141;
+  line-height: 38px;
+  margin-bottom: 16px;
+  font-weight: normal;
+}
+.main-content__article_text {
+  color: #646464;
+  font-size: 18px;
+  line-height: 26px;
 }
 .download-btn {
-  font-family: FiraSans-Bold;
+  padding: 9px 12px;
+  border: 2px solid #e85f61;
+  color: #e85f61;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'FiraSans-Bold';
+  display: inline-block;
+  border-radius: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  float: right;
+  margin-top: 40px;
+}
+.download-btn:hover {
+  color: #fff;
+  background: #e85f61;
+}
+.download-btn__icon {
+  margin-right: 5px;
+}
+.download-btn__text {
+  font-size: 14px;
 }
 .footer {
   min-width: 960px;
+  background: #414141;
+}
+.soc {
+  padding: 10px;
 }
 .soc__link {
   display: inline-block;
@@ -364,26 +402,26 @@ body {
   overflow: hidden;
 }
 .soc__link_fb {
-  background: url(img/icons/socials-buttons-2.png) 0 0;
+  background: url(img/icons/socials-buttons-2.png) -6px -5px;
   transition: all .5s;
 }
 .soc__link_vk {
-  background: url(img/icons/socials-buttons-2.png) -38px 0;
+  background: url(img/icons/socials-buttons-2.png) -44px -5px;
   transition: all .5s;
 }
 .soc__link_tw {
-  background: url(img/icons/socials-buttons-2.png) -76px 0;
+  background: url(img/icons/socials-buttons-2.png) -82px -5px;
   transition: all .5s;
 }
 .soc__link_fb:hover {
-  background: url(img/icons/socials-buttons-2.png) 0 30px;
+  background: url(img/icons/socials-buttons-2.png) -6px 35px;
   transition: all .5s;
 }
 .soc__link_vk:hover {
-  background: url(img/icons/socials-buttons-2.png) -38px 30px;
+  background: url(img/icons/socials-buttons-2.png) -44px 35px;
   transition: all .5s;
 }
 .soc__link_tw:hover {
-  background: url(img/icons/socials-buttons-2.png) -76px 30px;
+  background: url(img/icons/socials-buttons-2.png) -82px 35px;
   transition: all .5s;
 }
