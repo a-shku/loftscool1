@@ -5,8 +5,11 @@
     <meta description="first project">
     <meta keywords="loftscool">
     <title>Portfolio</title>
+    
     <link rel="stylesheet" href="web/vendor/css/assets.min.css" type="text/css">
     <link rel="stylesheet" href="web/core/assets/main-app.css" type="text/css" />
+    <script type="text/javascript" src="web/vendor/js/bundle/assets.js"></script>
+    <script type="text/javascript" src="web/core/assets/main-app.js"></script>
     
    <script id="__bs_script__">
     document.write("<script async src='https://HOST:8081/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
@@ -131,6 +134,11 @@
             </div>
         </div>
     </footer>
-    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var a = $('body');
+            console.log(a);
+        });
+    </script>
 </body>
 </html>
