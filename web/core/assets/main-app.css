@@ -286,7 +286,7 @@ body {
   color: #33c1e3;
   padding-bottom: 5px;
   font-weight: bold;
-  background: url(img/bg/dotted-border.png) 0 bottom repeat-x;
+  background: url(img/bg/dotted-border.png) -3px bottom repeat-x;
 }
 .content {
   background: #f6f6f6 /*url('./img/bg/geometry2.png') repeat*/;
@@ -305,19 +305,15 @@ body {
 .menu {
   text-align: right;
 }
-.menu__item {
-  line-height: 45px;
-}
 .menu__item__link {
   display: inline-block;
   width: 100%;
-  color: #414141;
   text-decoration: none;
   font-size: 18px;
   font-family: FiraSans-Regular;
+  line-height: 45px;
   padding-right: 30px;
-  line-height: 28px;
-  color: #33c1e3;
+  color: #414141;
 }
 .menu__icon {
   letter-spacing: 4px;
@@ -327,6 +323,7 @@ body {
 }
 .menu__item__link:active {
   color: #33c1e3;
+  font-family: 'firaSans-medium';
   -webkit-box-shadow: inset -5px 0px 0px 0px #33c1e3;
   -moz-box-shadow: inset -5px 0px 0px 0px #33c1e3;
   box-shadow: inset -5px 0px 0px 0px #33c1e3;
