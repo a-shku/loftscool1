@@ -269,6 +269,11 @@ body {
   padding-top: 25px;
   padding-bottom: 50px;
   min-width: 960px;
+  display: table-row;
+  height: 100%;
+}
+.content-padding {
+  padding: 20px 0;
 }
 .main-content {
   max-width: 600px;
@@ -399,6 +404,7 @@ body {
 .footer {
   min-width: 960px;
   background: #414141;
+  padding: 1.6rem 0;
 }
 .footer-wrapper {
   display: flex;
@@ -407,9 +413,10 @@ body {
 }
 .footer-item {
   align-self: center;
+  width: 50%;
 }
-.soc {
-  padding: 10px;
+.footer-right {
+  text-align: right;
 }
 .soc__link {
   display: inline-block;
