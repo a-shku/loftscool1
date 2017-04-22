@@ -4,8 +4,22 @@
 });
   $(document).ready(function() {
       
+    var contentContainer = $('#content-container');
+    
+    var menuLink = $('.menu__item__link');
+      
     var hash = window.location.hash.substr(1);
     
+    var activeLink = function(name){
+       
+        $(menuLink).removeClass('active');
+        for(var i = 0, len = menuLink.length; i < len; i++){
+            if($(menuLink[i]).attr("href") == name){
+                $(menuLink[i]).addClass('active');
+            }
+        }
+        
+    };
       
     window.onhashchange = changeUrlHandler;
       
@@ -25,7 +39,6 @@
     };
     
     function changeUrlHandler() {
-      console.log('134', window.location.hash.substr(1));
       hash = window.location.hash;
       if(hash.charAt(0) == '#'){
           hash = window.location.hash.substr(1);
@@ -53,9 +66,10 @@
       
       
       
-    var contentContainer = $('#content-container');
+    
  
-            
+    
+    
     function setContent(file){
         
         //console.log('file', file,  states[file].url);
@@ -65,9 +79,10 @@
         $.get(states[file].url, function(data) {
             contentContainer.html(data);
         });
+        activeLink(file);
     };
             
-    var menuLink = $('.menu__item__link');
+    
 
     menuLink.on("click", function(e) {
         e.preventDefault();

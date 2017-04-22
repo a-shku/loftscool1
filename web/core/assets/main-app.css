@@ -305,7 +305,7 @@ body {
 .menu__item__link:active {
   color: #1121ee;
 }
-.menu__item__link__active {
+.menu__item__link.active {
   color: #33c1e3;
   font-family: 'firaSans-medium';
   -webkit-box-shadow: inset -5px 0px 0px 0px #33c1e3;
