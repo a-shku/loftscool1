@@ -6,10 +6,10 @@
     <meta keywords="loftscool">
     <title>Portfolio</title>
     
-    <link rel="stylesheet" href="web/vendor/css/assets.min.css" type="text/css">
-    <link rel="stylesheet" href="web/core/assets/main-app.css" type="text/css" />
-    <script type="text/javascript" src="web/vendor/js/bundle/assets.js"></script>
-    <script type="text/javascript" src="web/core/assets/main-app.js"></script>
+    <link rel="stylesheet" href="/web/vendor/css/assets.min.css" type="text/css">
+    <link rel="stylesheet" href="/web/core/assets/main-app.css" type="text/css" />
+    <script type="text/javascript" src="/web/vendor/js/bundle/assets.js"></script>
+    <script type="text/javascript" src="/web/core/assets/main-app.js"></script>
     
    <script id="__bs_script__">
     document.write("<script async src='https://HOST:8081/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
@@ -40,26 +40,26 @@
             </div>
         </header>
         
-        <section class="content">
+        <section class="content" >
             <div class="container content-padding">
                 
                 <aside class="left-sidebar ">
                     <nav class="main-nav">
                     <ul class="menu">
                         <li class="menu__item">
-                            <a href="#" class="menu__item__link">
+                            <a href="about" class="menu__item__link menu__item__link__active"><!--/web/core/pages/about.html-->
                                 <i class="fa fa-user-secret menu__icon" aria-hidden="true"></i>
                                 Обо мне
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__item__link">
+                            <a href="career" class="menu__item__link"><!--/web/core/pages/career.html-->
                                 <i class="fa fa-rocket" aria-hidden="true"></i>
                                 Карьерный путь
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__item__link">
+                            <a href="portfolio" class="menu__item__link">
                                 <i class="fa fa-briefcase" aria-hidden="true"></i>
                                 Портфолио
                             </a>
@@ -68,37 +68,8 @@
                     </nav>
                 </aside>
                 
-                <content class="main-content clear-fix">
-                    <div class="main-content__big-photo ">
-                        <img src="web/core/assets/img/content/main-photo.jpg" alt="" class="main-content__big-photo_img">
-                    </div>
-                    <div class="main-content__article">
-                        <h1 class="main-content__article_title">Обо мне</h1>
+                <content class="main-content clear-fix" id="content-container">
                     
-                        <div class="main-content__article_text">
-                            <p class="main-content_main-text__p">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                                ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-                                augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum
-                                claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
-                            </p>
-                            <p class="main-content_main-text__p">
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem
-                                modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-                            </p>
-                            <p class="main-content_main-text__p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                                ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-                                delenit augue duis dolore te feugait nulla facilisi.
-                            </p>
-                          
-                        </div>
-                        
-                        <a href="" download="readme.md" class="download-btn">
-                            <i class="fa fa-download download-btn__icon"></i>
-                            <span class="download-btn__text">Скачать резюме</span>
-                        </a>
-                    
-                    </div>
                 
                     
                 </content>
@@ -140,6 +111,14 @@
         $(document).ready(function() {
             var a = $('body');
             console.log(a);
+            
+            
+            
+            
+            
+            
+            
+           
         });
     </script>
     

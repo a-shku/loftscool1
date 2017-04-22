@@ -1,10 +1,3 @@
- $(document).ready(function() {
-            var a = $('body');
-            console.log('included');
-            
-           
-            
-});
   $(document).ready(function() {
       
       var states = {
