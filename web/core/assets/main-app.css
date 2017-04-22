@@ -217,9 +217,20 @@ img {
 html {
   font-family: 'FiraSans-Regular', Helvetica, sans-serif;
   font-size: 10px;
+  height: 100%;
 }
 body {
   font-size: 1.6rem;
+  height: 100%;
+}
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.top {
+  display: table-row;
+  height: 100%;
 }
 .clear-fix:before,
 .clear-fix:after {
