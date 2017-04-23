@@ -567,21 +567,42 @@ body {
   background: #33c1e3;
 }
 .portfolio-list {
-  margin: 0 -15px;
+  margin: 0 0 0 -12px;
 }
 .portfolio-item {
   float: left;
   width: 33.3%;
-  margin: 0 0px 20px;
+  margin: 0 0px 12px;
 }
 .portfolio-link {
-  margin: 0 15px;
+  margin: 0 0 0 12px;
   display: inline-block;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .portfolio-item__img {
   object-fit: cover;
   width: 100%;
+}
+.portfolio-description {
+  padding: 20px;
+}
+.portfolio-description__name {
+  color: #33c1e3;
+  font-size: 21px;
+  line-height: 24px;
+  bottom: 5px;
+}
+.portfolio-description__description {
+  color: #414141;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  margin-bottom: 17px;
+}
+.portfolio-description__app {
+  color: #aeaeae;
+  font-size: 18px;
 }
