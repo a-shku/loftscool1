@@ -17,7 +17,8 @@ paths.bowerComponents = './bower_components/';
 
 resources.bowerJs = [
     paths.bowerComponents + "jquery/dist/jquery.js",
-    paths.bowerComponents + 'angular-nicescroll/angular-nicescroll.js'
+    paths.bowerComponents + 'jquery.nicescroll/jquery.nicescroll.min.js',
+    
 ];
 
 gulp.task('clean:js:assets', function () {

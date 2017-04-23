@@ -476,6 +476,9 @@ body {
 .about-photo {
   margin-left: 22px;
 }
+.main-content__article_text {
+  padding-right: 6px;
+}
 .career-main-photo {
   width: 220px;
   height: 220px;
