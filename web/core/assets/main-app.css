@@ -475,6 +475,12 @@ body {
   border-radius: 6px;
   object-fit: cover;
 }
+.milestones__item * {
+  transition: all 0.5s;
+}
+.milestones__item:hover * {
+  transition: all 0.5s;
+}
 .milestones__item {
   position: relative;
   margin-bottom: 10px;
@@ -542,6 +548,19 @@ body {
 }
 .milestones__item:last-child .milestones__description:after {
   display: none;
+}
+.milestones__item:hover .milestones__year {
+  color: #33c1e3;
+  font-weight: bold;
+}
+.milestones__item:hover .milestones__year:after {
+  border-color: #94e0f2;
+}
+.milestones__item:hover .milestones__description {
+  background: #33c1e3;
+}
+.milestones__item:hover p {
+  color: #fff;
 }
 .milestones__description.active {
   background: #33c1e3;
