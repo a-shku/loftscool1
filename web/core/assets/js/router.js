@@ -1,35 +1,30 @@
   $(document).ready(function() {
       
-    var contentContainer = $('#content-container');
-    
-    var menuLink = $('.menu__item__link');
-      
-    var hash = window.location.hash.substr(1);
-    
-    var activeLink = function(name){
-       
-        $(menuLink).removeClass('active');
-        for(var i = 0, len = menuLink.length; i < len; i++){
-            if($(menuLink[i]).attr("href") == name){
-                $(menuLink[i]).addClass('active');
+    var contentContainer = $('#content-container'),
+        menuLink = $('.menu__item__link'),
+        hash = window.location.hash.substr(1),
+        activeLinks = function(name) {
+            $(menuLink).removeClass('active');
+            for (var i = 0, len = menuLink.length; i < len; i++) {
+                if ($(menuLink[i]).attr("href") == name) {
+                    $(menuLink[i]).addClass('active');
+                }
             }
-        }
-        
-    };
+        };
       
     window.onhashchange = changeUrlHandler;
       
     var states = {
         about: {
-            url: '/web/core/pages/about.html',
+            url: '/web/core/pages/about/about.html',
             name: 'about'
         },
         career: {
-            url: '/web/core/pages/career.html',
+            url: '/web/core/pages/career/career.html',
             name: 'career'
         },
         portfolio: {
-            url: '/web/core/pages/portfolio.html',
+            url: '/web/core/pages/portfolio/portfolio.html',
             name: 'portfolio'
         }
     };
@@ -59,11 +54,6 @@
         } catch(error){console.log(error);}
         
     }
-      
-      
-      
-    
- 
     
     
     function setContent(file){
@@ -75,9 +65,8 @@
         $.get(states[file].url, function(data) {
             contentContainer.html(data);
         });
-        activeLink(file);
+        activeLinks(file);
     };
-            
     
 
     menuLink.on("click", function(e) {

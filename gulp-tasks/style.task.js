@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     
     
 var resources = {}, paths = {}, assetsFiles;
-var filesForWatch = ['web/core/assets/less/*.less', 'index.html', 'web/**/*.*'];
+var filesForWatch = ['web/**/*.*', 'index.html'];
 
 paths.bowerComponents = 'bower_components/';
 paths.css = 'web/core/assets/css';
