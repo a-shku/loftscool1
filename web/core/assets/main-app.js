@@ -24,8 +24,7 @@ $(document).ready(
         var waitingScroll = setInterval(
         function() {
             scrollWaitingCounter += 50;
-            console.log('scroll', $('#article-container'));
-            if ($('#article-container').length || scrollWaitingCounter > 1500) {
+            if ($('#article-container').length || scrollWaitingCounter > 2000) {
                 $('#article-container').niceScroll({
                     cursorcolor: "#d8d8d8",
                     cursorwidth: "8px"
@@ -101,7 +100,6 @@ $(document).ready(
         
         //console.log('file', file,  states[file].url);
         if(file == 'about'){
-            console.log('came to about');
             waiting();
         }
         
