@@ -8,7 +8,8 @@ $(document).ready(
 
     $("html").niceScroll({
         cursorcolor: "#d8d8d8",
-        cursorwidth: "8px"
+        cursorwidth: "10px",
+        hidecursordelay: "800"
     });
    
     
@@ -27,7 +28,8 @@ $(document).ready(
             if ($('#article-container').length || scrollWaitingCounter > 2000) {
                 $('#article-container').niceScroll({
                     cursorcolor: "#d8d8d8",
-                    cursorwidth: "8px"
+                    cursorwidth: "8px",
+                    hidecursordelay: "800"
                 });
                 clearInterval(waitingScroll);
                 scrollWaitingCounter = 0;
@@ -99,14 +101,15 @@ $(document).ready(
     function setContent(file){
         
         //console.log('file', file,  states[file].url);
-        if(file == 'about'){
-            waiting();
-        }
+        
         
          window.location.hash = states[file].name;
          
         $.get(states[file].url, function(data) {
             contentContainer.html(data);
+            if (file == 'about') {
+                waiting();
+            }
         });
         activeLinks(file);
     };

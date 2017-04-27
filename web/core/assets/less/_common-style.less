@@ -107,60 +107,7 @@ body {
     
 }
 
-.left-sidebar {
-    width: 23.5%;
-    float: left;
-    //margin-right: 55px;
-    margin-right: 20px;
-}
 
-.menu {
-    text-align: right;
-}
-
-.menu__item {
-    
-   
-}
-
-.menu__item__link {
-    display: inline-block;
-    width: 100%;
-    
-    text-decoration: none;
-    font-size: 18px;
-    font-family: FiraSans-Regular;
-    line-height: 44px;
-    padding-right: 30px;
-    
-    //line-height: 28px;
-    //color: rgb(51, 193, 227);
-    color: #414141;
-}
-
-.menu__icon {
-    letter-spacing: 4px;
-}
-
-.menu__item__link:hover {
-    color: #33c1e3;
-    
-}
-
-.menu__item__link:active {
-    color: #1121ee;
-   
-}
-   
-
-.menu__item__link.active {
-    color: #33c1e3;
-    font-family: 'firaSans-medium';
-    
-   -webkit-box-shadow: inset -6px 0px 0px 0px #33c1e3;
-    -moz-box-shadow: inset -6px 0px 0px 0px #33c1e3;
-    box-shadow: inset -6px 0px 0px 0px #33c1e3;
-}
 
 .main-content__big-photo {
     float: left;
@@ -182,12 +129,17 @@ body {
     
 }
 
-.main-content__article_text {
+.main-content__article__text {
     height: 340px;
     overflow: auto;
+     color: #646464;
+    font-size: 18px;
+    line-height: 26px;
+    height: 360px;
+    padding-right: 1rem;
 }
 
-.main-content__article_title {
+.main-content__article__title {
     font-family: 'firaSans-medium';
     font-size: 35px;
     color: #414141;
@@ -196,11 +148,7 @@ body {
     font-weight: normal;
 }
 
-.main-content__article_text {
-    color: #646464;
-    font-size: 18px;
-    line-height: 26px;
-}
+
 
 .main-content_main-text__p {
     
@@ -232,6 +180,12 @@ body {
 
 .download-btn__text {
     font: 1.4rem/2.8rem openSans-Bold;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 750px;
+    }
 }
 
 
