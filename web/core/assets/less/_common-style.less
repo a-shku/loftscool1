@@ -30,12 +30,17 @@ html {
 body {
     font-size: 1.6rem;
     height: 100%;
+    background: #f6f6f6;
 }
 
 .wrapper {
     display: table;
     height: 100%;
     width: 100%;
+}
+
+.header {
+    background: #fff;
 }
 
 .top {
@@ -90,14 +95,14 @@ body {
     background: rgb(246, 246, 246) /*url('./img/bg/geometry2.png') repeat*/;
     padding-top: 25px;
     padding-bottom: 50px;
-    min-width: 960px;
+    min-width: 940px;
     
     display: table-row;
     height: 100%;
 }
 
 .content-padding {
-    padding: 26px 0 70px;
+    padding: 26px 0px 70px;
 }
 
 .main-content {
@@ -111,6 +116,7 @@ body {
 
 .main-content__big-photo {
     float: left;
+    width: 40%;
 }
 
 .main-content__big-photo_img {
@@ -124,7 +130,7 @@ body {
 
 .main-content__article {
     float: right;
-    width: 380px;
+    width: 55%;
     
     
 }
@@ -154,17 +160,22 @@ body {
     
 }
 
-.download-btn {
-    padding: 4px 13px;
-    border: 2px solid #e85f61;
-    color: #e85f61;
-    text-decoration: none;
+.btn {
+     text-decoration: none;
     font-size: 14px;
     font-family: 'FiraSans-Bold';
     display: inline-block;
     border-radius: 40px;
     cursor: pointer;
     background-color: transparent;
+    padding: 4px 13px;
+    border: 2px solid #e85f61;
+}
+
+.download-btn {
+   
+    color: #e85f61;
+   
     float: right;
     margin-top: 40px;
 }
@@ -182,11 +193,62 @@ body {
     font: 1.4rem/2.8rem openSans-Bold;
 }
 
+
+
 @media screen and (max-width: 992px) {
     .container {
         width: 750px;
+        padding: 0 20px;
     }
+    
+    .content-padding {
+        padding: 0px 20px 70px;
+    }
+    
+    .header {
+        margin-bottom: 25px;
+    }
+    
+    .left-sidebar {
+        margin-bottom: 40px;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+   
 }
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 500px !important;
+        padding: 0 20px;
+        background: #000;
+    }
+    body {background: #000;}
+}
+
+// @media screen and (max-width: 480px) {
+//     .container {
+//         width: 95% !important;
+//         padding: 0 20px;
+//         background: #000;
+//     }
+//     body {background: #000;}
+// }
+
+
+
+// @media screen and (max-width: 768px) {
+//     .container {
+//         width: 480px;
+//         padding: 0 20px;
+//     }
+    
+    
+// }
 
 
 
