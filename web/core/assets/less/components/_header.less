@@ -47,6 +47,7 @@
 
     font-weight: bold;
     background: url(img/bg/dotted-border.png) -3px bottom repeat-x;
+    transition: color, background, 0.2s;
 }
 
 // .contacts {
@@ -54,25 +55,6 @@
 //     display: inline-block;
 //     position: relative;
 // }
-
-
-.contacts {
-
-	display: inline-block;
-	position: relative;
-
-	&:hover {
-		.header_container_right__link {
-			//background: url('../img/decor/dotted-border-hover.png') 0 bottom repeat-x;
-			background: url(img/bg/dotted-border-hover.png) -3px bottom repeat-x;
-			color: #e85f61;
-		}
-
-		.contacts__dropdown {
-			display: block;
-		}
-	}
-}
 
 .contacts__dropdown {
 	padding: 15px 20px;
@@ -82,10 +64,17 @@
 	position: absolute;
 	top: 100%;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, -50%);
 	z-index: 10;
 	margin-top: 12px;
 	display: none;
+	
+	visibility: hidden;
+	opacity: 0;
+	z-index: -1;
+	height: 0;
+	width: 0;
+	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 
 	&:before {
 		content: "";
@@ -96,6 +85,35 @@
 		top: -17px;
 	}
 }
+
+.contacts {
+	display: inline-block;
+	position: relative;
+	
+	&:hover {
+		.header_container_right__link {
+			//background: url('../img/decor/dotted-border-hover.png') 0 bottom repeat-x;
+			background: url(img/bg/dotted-border-hover.png) -3px bottom repeat-x;
+			color: #e85f61;
+		}
+
+		.contacts__dropdown {
+			display: block;
+			height: auto;
+			width: auto;
+			
+			visibility: visible;
+            opacity: 1;
+            z-index: 1;
+            transform: translate(-50%, 0%);
+            transition-delay: 0s, 0s, 0.3s;
+			
+		    
+		}
+	}
+}
+
+
 
 .contacts__dropdown-triangle {
 	position: absolute;
@@ -209,10 +227,21 @@
 
 @media screen and (max-width: 480px) {
     
-    .header_container_left__name {
-        max-width: 150px;
-        display: inline-block;
+    .header_container_left {
+        width: 85%;    
     }
+    
+    .header_container_right {
+        width: 15%;
+    }
+    
+    .header_container_left__name {
+        max-width: 180px;
+        display: inline-block;
+        font-size: 14px;
+    }
+    
+    
     
 }
 

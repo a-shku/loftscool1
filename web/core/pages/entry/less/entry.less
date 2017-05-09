@@ -8,6 +8,7 @@
     right: 0;
     bottom: 0;
     background-image: url('/web/core/assets/img/bg/geometry2.png');
+    perspective: 500px;
 }
 
 .wrapper_auth::before {
@@ -16,6 +17,16 @@
     height: 100%;
     width: 0;
     vertical-align: middle;
+}
+
+.auth:hover {
+    animation: home 0.5s forwards;
+	perspective:160px;
+}
+
+@keyframes home{
+	50%{perspective: 150px; transform: rotateX(2deg);}
+	100%{perspective: 140px;transform: rotateX(5deg);}
 }
 
 
@@ -27,12 +38,40 @@
     -webkit-animation: auth-move;
     -o-animation: auth-move;
     animation-name: auth-move;
-    animation-duration: 1s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
+
+
+
 @keyframes auth-move {
-    margin-left: -1000px;
-    0% {transform:rotate(-45deg)}
+   
+    0% {
+        transform:rotate(-45deg);
+        margin-left: -1500px;
+    }
+    80% {
+        transform: rotate(-45deg);
+         
+    }
+    90% {
+        margin-left: 0px;
+        transform: perspective(900px);
+        transform: scale3d(1.1, 1.1, 1.1);
+        
+    }
+    
+    95% {
+        transform: scale3d(.9, 0.9, 0.9);
+    }
+    
+    100% {
+        transform: rotate(0deg);
+        transform: scale3d(1, 1, 1); 
+    }
+   
 }
 
 // @keyframes auth-move {
@@ -93,7 +132,6 @@
     text-align: center;
     line-height: 1.42;
 }
-
 
 .auth__bottom {
     background: #33c1e3;
