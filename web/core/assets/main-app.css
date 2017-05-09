@@ -360,16 +360,10 @@ body {
 @media screen and (max-width: 992px) {
   .container {
     width: 750px;
-    padding: 0 20px;
+    padding: 0 0;
   }
   .content-padding {
-    padding: 0px 20px 70px;
-  }
-  .header {
-    margin-bottom: 25px;
-  }
-  .left-sidebar {
-    margin-bottom: 40px;
+    padding: 0px 0px 70px;
   }
   .main-content {
     width: 100%;
@@ -378,13 +372,19 @@ body {
 @media screen and (max-width: 768px) {
   .container {
     width: 480px;
+    padding: 0 0;
+  }
+  .content-padding {
+    padding: 0px 0px 70px;
+  }
+  .main-content {
     padding: 0 20px;
   }
 }
 @media screen and (max-width: 480px) {
   .container {
     width: 95% ;
-    padding: 0 20px;
+    padding: 0 0;
   }
 }
 .star {
@@ -512,6 +512,11 @@ body {
   text-align: left;
   display: block;
 }
+@media screen and (max-width: 992px) {
+  .header {
+    margin-bottom: 18px;
+  }
+}
 @media screen and (max-width: 768px) {
   .header_container_left {
     width: 75%;
@@ -542,6 +547,12 @@ body {
     right: 0px;
     transform: translateX(0);
     left: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header_container_left__name {
+    max-width: 150px;
+    display: inline-block;
   }
 }
 /*6 menu ===================================*/
@@ -599,6 +610,14 @@ body {
 @media screen and (max-width: 992px) {
   .left-sidebar {
     margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu__icon {
+    display: none;
+  }
+  .menu__item__link {
+    font-size: 1.4rem;
   }
 }
 /*7 footer*/
@@ -795,7 +814,7 @@ body {
   }
   .download-btn {
     display: block;
-    margin: 50px auto;
+    margin: 30px auto 90px;
     width: 174px;
     float: none;
   }
@@ -902,7 +921,19 @@ body {
 .milestones__description.active {
   background: #33c1e3;
 }
+@media screen and (max-width: 992px) {
+  .main-content__article {
+    width: 56%;
+  }
+}
 @media screen and (max-width: 768px) {
+  .main-content__article__title {
+    margin-bottom: 25px;
+  }
+  .career-main-photo {
+    width: 228px;
+    height: 228px;
+  }
   .milestones__item {
     margin-bottom: 20px;
   }
@@ -912,9 +943,6 @@ body {
   .milestones__description:after,
   .milestones__description:before {
     display: none;
-  }
-  .portfolio-item {
-    width: 50%;
   }
 }
 .portfolio-list {
@@ -929,9 +957,11 @@ body {
   display: inline-block;
   margin: 0 0px 20px;
   vertical-align: top;
+  padding-left: 20px;
 }
 .portfolio-link {
-  margin: 0 0 0 20px;
+  margin: 0;
+  width: 100%;
   display: inline-block;
   background: #fff;
   border-radius: 10px;
@@ -977,5 +1007,10 @@ body {
 @media screen and (max-width: 768px) {
   .portfolio-item {
     width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolio-item {
+    width: 100%;
   }
 }
