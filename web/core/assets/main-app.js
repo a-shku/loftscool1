@@ -6,11 +6,11 @@ $(document).ready(
 
   function() { 
 
-    // $("html").niceScroll({
-    //     cursorcolor: "#d8d8d8",
-    //     cursorwidth: "10px",
-    //     hidecursordelay: "800"
-    // });
+    $("html").niceScroll({
+        cursorcolor: "#d8d8d8",
+        cursorwidth: "10px",
+        hidecursordelay: "800"
+    });
    
     
 
@@ -18,34 +18,29 @@ $(document).ready(
 
 );
 
-  $(document).ready(function() {
+;(function (app) {
+    'use strict';
+$(document).ready(function() {
+    'use strict'
       
-    var scrollWaitingCounter = 0;
-    function waiting(){
-        var waitingScroll = setInterval(
-        function() {
-            scrollWaitingCounter += 50;
-            if ($('#article-container').length || scrollWaitingCounter > 2000) {
-                $('#article-container').niceScroll({
-                    cursorcolor: "#d8d8d8",
-                    cursorwidth: "8px",
-                    hidecursordelay: "800"
-                });
-                clearInterval(waitingScroll);
-                scrollWaitingCounter = 0;
-            }
     
-    
-        }, 50
-    );
+    function setScroll(){
+        $('#article-container').niceScroll({
+            cursorcolor: "#d8d8d8",
+            cursorwidth: "8px",
+            hidecursordelay: "800"
+        });
     };
-    waiting();
+    setScroll();
     
       
-    var contentContainer = $('#content-container'),
+    var refreshFlag = false,
+        contentContainer = $('#content-container'),
         menuLink = $('.menu__item__link'),
         hash = window.location.hash.substr(1),
         activeLinks = function(name) {
+            console.log(window);
+            
             $(menuLink).removeClass('active');
             for (var i = 0, len = menuLink.length; i < len; i++) {
                 if ($(menuLink[i]).attr("href") == name) {
@@ -72,21 +67,20 @@ $(document).ready(
     };
     
     function changeUrlHandler() {
-      hash = window.location.hash;
-      if(hash.charAt(0) == '#'){
-          hash = window.location.hash.substr(1);
-      }
-      
-    
-      if (hash) {
-          try {
-              setContent(hash);
-          }
-          catch (error) {
-              console.log(error);
-          }
-      }
-    
+        // if(refreshFlag){
+        //     refreshFlag = false;
+        //     return;
+        // }
+        
+        if (window.location.hash && window.location.hash) {
+            hash = window.location.hash.substr(1);
+            try {
+                setContent(hash);
+            }
+            catch (error) {
+                console.log(error);
+            }
+        }
     };
     
       
@@ -100,21 +94,19 @@ $(document).ready(
     
     function setContent(file){
         
-        //console.log('file', file,  states[file].url);
-        
-        
-         window.location.hash = states[file].name;
+        window.location.hash = states[file].name;
+        refreshFlag = true;
          
         $.get(states[file].url, function(data) {
             contentContainer.html(data);
             if (file == 'about') {
-                waiting();
+                setScroll();
             }
         });
         activeLinks(file);
     };
     
-
+    //navigation listener
     menuLink.on("click", function(e) {
         e.preventDefault();
         
@@ -129,5 +121,6 @@ $(document).ready(
            
             
 });
- 
+
+})();
  

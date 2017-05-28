@@ -443,16 +443,13 @@ body {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 10;
   margin-top: 12px;
   display: none;
-  visibility: hidden;
-  opacity: 0;
-  z-index: -1;
   height: 0;
   width: 0;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 1s;
 }
 .contacts__dropdown:before {
   content: "";
@@ -474,11 +471,6 @@ body {
   display: block;
   height: auto;
   width: auto;
-  visibility: visible;
-  opacity: 1;
-  z-index: 1;
-  transform: translate(-50%, 0%);
-  transition-delay: 0s, 0s, 0.3s;
 }
 .contacts__dropdown-triangle {
   position: absolute;
